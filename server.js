@@ -18,13 +18,34 @@ app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: false }))
 
 const mongoose = require('mongoose')
+if (!process.env.DATABASE_URL) {
+    console.error("Error: DATABASE_URL is not defined in the environment variables.");
+    process.exit(1); // Exit the process with an error code
+}
 console.log('Database URL:', process.env.DATABASE_URL);
-mongoose.connect(process.env.DATABASE_URL)
+
+async function connectToDatabase() {
+    try {
+        await mongoose.connect(process.env.DATABASE_URL);
+        console.log('Connected to Mongoose');
+    } catch (error) {
+        console.error('Error connecting to MongoDB:', error);
+    }
+}
+
+// Call the connection function
+connectToDatabase();
+
+// mongoose.connect(process.env.DATABASE_URL)
 const db = mongoose.connection
 db.on('error', error => console.error('Error connecting to MongoDB:',error))
-db.once('open', () => console.log('Connected to Mongoose'))
+// db.once('open', () => console.log('Connected to Mongoose'))
 
 app.use('/', indexRouter)
 app.use('/authors', authorRouter)
 
-app.listen(process.env.PORT || 3000)
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+})
