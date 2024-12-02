@@ -1,0 +1,36 @@
+@import 'shared/fonts.css';
+@import 'shared/variables.css';
+@import 'shared/header.css';
+@import 'shared/buttons.css';
+
+body {
+    font-family: var(--font-subheading);
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+    color: var(--color-text-light);
+    background: linear-gradient(to right, 
+    var(--color-background-dark), 
+    var(--color-background-light));
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.inner-container {
+    margin: 0 32px; 
+}
+
+.page-header {
+    font-size: 32px;
+    font-weight: 500;
+    font-family: var(--font-heading);
+}
