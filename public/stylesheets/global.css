@@ -2,6 +2,10 @@
 @import 'shared/variables.css';
 @import 'shared/header.css';
 @import 'shared/buttons.css';
+@import 'shared/form.css';
+@import 'shared/author.css';
+@import 'shared/books.css';
+
 
 body {
     font-family: var(--font-subheading);
@@ -33,4 +37,8 @@ body {
     font-size: 32px;
     font-weight: 500;
     font-family: var(--font-heading);
+}
+
+.error-message { 
+    color: hsl(var(--color-danger-hue), 100%, 50%);
 }

@@ -1,0 +1,78 @@
+:root {
+    --form-label-font-size: 20px;
+    --form-input-background-color: hsl(var(--color-base-hue), 100%, 31%);
+    --form-input-border-color: hsl(var(--color-base-hue), 100%, 50%);
+    --form-input-border-color-light: hsl(var(--color-base-hue), 100%, 80%);
+}
+
+.form-row {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    margin-left: 32px; 
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.form-item:first-child {
+    margin-left: 0;
+}
+
+.form-item-no-grow {
+    flex-grow: 0;
+}
+
+.form-row-end {
+    justify-content: flex-end;
+}
+
+.form-item > label {
+    font-size: var(--form-label-font-size);
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.form-item input, .form-item select, .form-item textarea {
+    height: 32px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    border: 1px solid var(--form-input-border-color);
+    background-color: var(--form-input-background-color);
+    color: var(--color-text-light);
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'Open Sans', sans-serif;
+    outline: none;
+}
+
+.form-item textarea {
+    height: 100%;
+    resize: none;
+}
+
+.form-item select option {
+    background-color: black;
+}
+
+.form-item input:focus, .form-item select:focus, .form-item textarea:focus {
+    border-color: var(--form-input-border-color-light);
+}
+
+.upload-item {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 0;
+}
+
+.upload-item{
+    background-color: var(--form-input-background-color);
+    border: 1px solid var(--form-input-border-color);
+}
+
+.upload-item {
+    color: var(--color-text-light);
+    font-size: inherit;
+}

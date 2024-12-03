@@ -12,10 +12,10 @@
 }
 .btn {
     border: 1px solid var(--color-brn-border);
-    border-radius: .5rem;
-    padding:.5rem 1rem;
-    font-size: 1.2rem;
-    font-family: var(--font-buttons);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
@@ -23,11 +23,11 @@
 
 .btn-row {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .btn-row > * {
-    margin-left: 1rem;
+    margin-left: 16px;
 }
 
 .btn-row > *:first-child {
