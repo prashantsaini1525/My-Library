@@ -3,6 +3,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const express = require('express')
+const path = require('path');
 const app = express()
 const expressLayouts = require('express-ejs-layouts')
 const bodyParser = require('body-parser')
@@ -14,7 +15,7 @@ const bookRouter = require('./routes/books')
 
 
 app.set('view engine', 'ejs')
-app.set('views', __dirname + '/views')
+app.set('views', path.join(__dirname, 'views'));
 app.set('layout',  'layouts/layout')
 app.use(expressLayouts)
 app.use(methodOverride('_method'))
