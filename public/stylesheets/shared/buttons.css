@@ -10,15 +10,18 @@
     --color-btn-danger-text-dark: black;
     
 }
+
 .btn {
-    border: 1px solid var(--color-brn-border);
-    border-radius: 8px;
-    padding: 8px 16px;
-    font-size: 20px;
-    font-family: 'Open Sans', sans-serif;
-    cursor: pointer;
-    text-decoration: none;
+    display: inline-block;
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    font-weight: bold;
     text-align: center;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline for anchor tags */
+    cursor: pointer;
 }
 
 .btn-row {
@@ -32,6 +35,12 @@
 
 .btn-row > *:first-child {
     margin-left: 0;
+}
+
+a.btn {
+    display: inline-block;
+    text-align: center;
+    line-height: normal; 
 }
 
 .btn-primary {

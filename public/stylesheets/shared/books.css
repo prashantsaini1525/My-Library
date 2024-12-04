@@ -7,6 +7,14 @@
 .book-cover {
     width: var(--book-cover-width);
     height: calc(var(--book-cover-width) / var(--book-cover-aspect-ratio));
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-cover:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .book-cover-large {
@@ -34,6 +42,12 @@
     height: auto; 
     border-radius: 8px; 
     margin-bottom: 10px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-details img.book-cover:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .book-details-label {
