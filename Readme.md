@@ -123,3 +123,6 @@ Improve the frontend with modern frameworks or design enhancements.
 ## Contributing
 
 Contributions are welcome! Feel free to fork the repository, open pull requests, or submit issues with suggestions and bug reports.
+
+## 📄 License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
