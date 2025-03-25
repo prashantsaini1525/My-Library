@@ -19,7 +19,7 @@ MyLibrary is a simple library management web application built with Node.js, Exp
 
 ## Screenshots
 
-You can display your screenshots in a grid using an HTML table. This helps keep large images under control by specifying a fixed width.
+Below is a grid of screenshots demonstrating various pages of the application:
 
 <table>
   <tr>
@@ -34,8 +34,6 @@ You can display your screenshots in a grid using an HTML table. This helps keep 
     <td colspan="2" align="center"><img src="./public/assets/Add New Author.png" alt="Screenshot 5" width="300" style="max-width:100%;"></td>
   </tr>
 </table>
-
----
 
 ## Features
 
@@ -97,7 +95,7 @@ The primary goal of MyLibrary is to serve as a learning tool for basic CRUD oper
 
 5. **Access the Application:**
 
-Open your browser and navigate to http://localhost:3000.
+- Open your browser and navigate to http://localhost:3000.
 
 ## Project Structure
 
